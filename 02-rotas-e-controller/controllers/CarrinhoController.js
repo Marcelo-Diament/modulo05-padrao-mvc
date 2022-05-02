@@ -2,7 +2,8 @@ const CarrinhoController = {
   removeItem: function () { },
   getItem: function () { },
   addItem: function (req, res) {
-    res.send("Item Adicionado");
+    const {item} = req.params
+    res.send(`Item "${item}" Adicionado`);
   },
 };
 
