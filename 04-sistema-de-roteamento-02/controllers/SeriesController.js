@@ -1,3 +1,4 @@
+const path = require("path")
 const series = require("../models/series.js")
 
 const controller = {
@@ -9,6 +10,7 @@ const controller = {
 
     res.send(resultadoFiltrado)
   },
+  criar: (req, res) => res.sendFile(path.join(__dirname, "..", "views", "criar-serie.html"))
 }
 
 module.exports = controller
