@@ -6,6 +6,8 @@ const controller = {
   porGenero: (req, res) => {
     const genero = req.params.genero
 
+    console.log(`\n\nGênero: ${req.params.genero}\n\n`)
+
     const resultadoFiltrado = series.filter(serie => serie.genero.toLowerCase() === genero.toLowerCase())
 
     res.send(resultadoFiltrado)
